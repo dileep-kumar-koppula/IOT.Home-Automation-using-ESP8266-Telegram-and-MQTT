@@ -38,7 +38,7 @@ This project enables home automation using the **ESP8266** microcontroller, **MQ
 - **/options**: Displays buttons for turning devices ON and OFF.
 - **/start**: Provides information on available commands.
 
-## Full Code
+## Code
 
 ```cpp
 #include <ESP8266WiFi.h>
