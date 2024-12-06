@@ -49,14 +49,14 @@ This project enables home automation using the **ESP8266** microcontroller, **MQ
 #define Relay1 D0
 
 // WiFi credentials
-#define WLAN_SSID       "realme 3"             // Your SSID
-#define WLAN_PASS       "12345678"             // Your password
+#define WLAN_SSID       "WiFi Name"             // Your SSID
+#define WLAN_PASS       "H8VyT^vt4CtyBY"             // Your password
 
 /* Adafruit.io Setup */
 #define AIO_SERVER      "io.adafruit.com"
 #define AIO_SERVERPORT  1883                   // Use 8883 for SSL
-#define AIO_USERNAME    "BJahnavi"             // Replace with your username
-#define AIO_KEY         "aio_jbtS71OQiNHOezQkD1C5oqno4hmG" // Replace with your Project Auth Key
+#define AIO_USERNAME    "HomeAutomation"             // Replace with your username
+#define AIO_KEY         "aio_jbtS71OQNYyVTyvzQkDdcfoqnvgvhveS" // Replace with your Project Auth Key
 
 /** Global State (you don't need to change this!) **/
 
@@ -150,7 +150,7 @@ else {
   if (text == F("/options")) {
 
     String keyboardJson = F("[[{ \"text\" : \"L1 ON\", \"callback_data\" : \"l1-on\" },{ \"text\" : \"L1 OFF\", \"callback_data\" : \"l1-off\" }],[{ \"text\" : \"L2 ON\", \"callback_data\" : \"l2-on\" },{ \"text\" : \"L2 OFF\", \"callback_data\" : \"l2-off\" }],[{ \"text\" : \"L3 ON\", \"callback_data\" : \"l3-on\"},{ \"text\" : \"L3 OFF\", \"callback_data\" : \"l3-off\" }],[{ \"text\" : \"L4 ON\", \"callback_data\" : \"l4-on\" },{ \"text\" : \"L4 OFF\", \"callback_data\" : \"l4-off\" }],[{ \"text\" : \"F1 ON\", \"callback_data\" : \"f1-on\" },{ \"text\" : \"F1 OFF\", \"callback_data\" : \"f1-off\" }],[{ \"text\" : \"F2 ON\", \"callback_data\" : \"f2-on\" },{ \"text\" : \"F2 OFF\", \"callback_data\" : \"f2-off\" }],[{ \"text\" : \"F3 ON\", \"callback_data\" : \"f3-on\" },{ \"text\" : \"F3 OFF\", \"callback_data\" : \"f3-off\" }],[{ \"text\" : \"F4 ON\", \"callback_data\" : \"f4-on\" },{ \"text\" : \"F4 OFF\", \"callback_data\" : \"f4-off\" }]]");
-    bot.sendMessageWithInlineKeyboard(chat_id, "MVGR-GLUG ROOM AUTOMATION BUTTONS(L,F indicate Light,Fan: )", "", keyboardJson);
+    bot.sendMessageWithInlineKeyboard(chat_id, "Home AUTOMATION BUTTONS(L,F indicate Light,Fan: )", "", keyboardJson);
   }
   if (text == F("/start")) {
     bot.sendMessage(chat_id, "/options : Returns the buttons for ON & OFF\n", "Markdown");
